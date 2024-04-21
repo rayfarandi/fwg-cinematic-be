@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  golang:
+    build: .
+    ports:
+      - 7777:9090
+    volumes:
+      - .:/app
+    environment:
+    - APP_SECRET=Develop@23
+    - CLOUDINARY_CLOUD_NAME=drsh7022q
+    - CLOUDINARY_API_KEY=844237998474496
+    - CLOUDINARY_API_SECRET=kq7L8HOC7oD8Ac6Ab7RFmP6IFmE
+    - DB_NAME=postgres
+    - DB_PASSWORD=jvdyOW2zIx5tKnGl
+    - DB_PORT=5432
+    - DB_HOST=aws-0-ap-southeast-1.pooler.supabase.com
+    - DB_USER=postgres.lzzhkjznacmshyuytavd
+    - DATABASE_CONNECT=postgres://postgres.lzzhkjznacmshyuytavd:jvdyOW2zIx5tKnGl@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
+    restart: always
